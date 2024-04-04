@@ -1,0 +1,11 @@
+body {
+  background-color: purple;
+  font-family: "Montserrat", sans-serif;
+}
+.first-class {
+  background: white;
+  max-width: 600px;
+  margin: 72px auto;
+  padding: 100px;
+  border-radius: 20px;
+}
