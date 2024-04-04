@@ -16,12 +16,13 @@
   <body>
     <div class="first-class">
       <header>
-        <form class="form-search">
+        <form class="form-search" id="form-search-action">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="form-search-bar"
+            id="form-search-input"
           />
           <input type="submit" value="Search" class="form-search-button" />
         </form>
@@ -29,7 +30,9 @@
       <main>
         <div class="weather-bits">
           <div>
-            <h1 class="women-weed-weather">Los Angeles</h1>
+            <h1 class="women-weed-weather" id="women-weed-weather">
+              Los Angeles
+            </h1>
             <p class="transplant-reasons">
               Tuesday <strong> 13:42</strong>, scattered clouds
               <br />
@@ -62,5 +65,6 @@
         </a>
       </footer>
     </div>
+    <script src="src/cocoa.js"></script>
   </body>
 </html>
