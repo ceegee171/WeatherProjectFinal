@@ -1,6 +1,14 @@
 body {
-  background-color: purple;
+  background-color: lavender;
   font-family: "Montserrat", sans-serif;
+}
+
+header {
+  border-bottom: 1px solid rgb(221, 221, 245);
+  padding: 0 0 20px;
+}
+a {
+  color: rgb(228, 95, 228);
 }
 .first-class {
   background: white;
@@ -8,4 +16,74 @@ body {
   margin: 72px auto;
   padding: 100px;
   border-radius: 20px;
+}
+
+.form-search-bar {
+  background-color: rgb(243, 232, 232);
+  border: none;
+  padding: 15px 45px;
+  border-radius: 8px;
+  width: 60%;
+  font-size: 20px;
+}
+
+.form-search-button {
+  background-color: rgb(228, 95, 228);
+  padding: 15px 45px;
+  border-radius: 8px;
+  border: none;
+  margin: 15px;
+  font-size: 20px;
+  text-emphasis-color: white;
+
+  border: 5%;
+}
+.weather-bits {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  padding: 20px auto;
+}
+
+.women-weed-weather {
+  padding: 5px 0;
+  font-size: 35px;
+  line-height: 20px;
+}
+
+.transplant-reasons {
+  font-size: 16px;
+  line-height: 20px;
+}
+.transplant-reasons strong {
+  color: rgba(213, 82, 30, 0.944);
+}
+.city-temperature {
+  line-height: 16px;
+  font-size: 35px;
+  padding: 30px 0;
+}
+.temperature-container {
+  display: flex;
+  margin-top: 18px;
+}
+.temperature-emoji {
+  font-size: 45px;
+  margin-left: 10px;
+}
+.temperature-digit {
+  font-size: 80px;
+  font-weight: bold;
+}
+.temperature-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+footer {
+  border-top: 1px solid lavender;
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 0 0;
 }
