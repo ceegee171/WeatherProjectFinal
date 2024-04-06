@@ -2,10 +2,13 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("description");
+  let humidityElement = document.querySelector("humidity");
 
   cityElement.innerHTML = response.data.city;
+  descriptionElement = response.data.condition.description;
+  humidityElement = `${response.data.temperature.humidity}%`;
   temperatureElement.innerHTMl = Math.round(temperature);
-  console.log(response.data.temperature.current);
 }
 function searchCity(city) {
   let apiKey = "1841a154a3444205bo994f2f03567t09";
