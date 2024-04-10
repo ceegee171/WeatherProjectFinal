@@ -80,6 +80,24 @@ main {
   font-size: 20px;
   margin-left: 10px;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: ;
+  color: #00000;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  color: brown;
+  opacity: 0.6;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.weather-forecast-temperature-max {
+  opacity: 0.6;
+}
+
 footer {
   border-top: 1px solid lavender;
   padding: 30px;
