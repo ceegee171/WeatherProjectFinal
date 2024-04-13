@@ -91,10 +91,13 @@ main {
   color: brown;
   opacity: 0.6;
 }
-.weather-forecast-day {
-  display: block inline-flex;
-  justify-content: space-between;
+.weather-forecast-icon {
+  width: 100%;
+  text-align: center;
+  height: 48px;
+  display: block;
 }
+
 .weather-forecast-temperature-min {
   opacity: 0.6;
 }
