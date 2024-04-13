@@ -12,9 +12,10 @@ function refreshWeather(response) {
   timeElement.innerHTML = formatDate(date);
   descriptionElement = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-
   windSpeedElement.innerHTML = response.data.wind.speed;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -53,7 +54,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "1841a154a3444205bo994f2f03567t09";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
   days.forEach(function (day) {
@@ -65,8 +74,8 @@ function displayForecast() {
             <div class="weather-forecast-date">${day}</div>
             <div class="weather-forecast-icon"> &#9728;&#65039;</div>
             <div class="weather-forecast-temperature">
-              <span class="weather-forecast-temperature-max"> 18°</span>
-              <span class="weather-forecast-temperature-min"> 12°</span>
+              <span class="weather-forecast-temperature-max"><strong> 18°</strong></span>
+              <span class="weather-forecast-temperature-min"> <strong> 12°</strong></span>
             </div>
           </div>
         </div>
@@ -76,7 +85,10 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
-displayForecast();
 
 let searchFormElement = document.querySelector("#form-search-action");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+displayForecast();
+searchCity("Paris");
+getForecast();
